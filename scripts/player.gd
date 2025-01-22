@@ -23,6 +23,11 @@ func _process(delta):
 	velocity = velocity.normalized() * SPEED
 	position += velocity * delta
 	
+	if velocity == Vector2.ZERO:
+		$AnimatedSprite2D.animation = "Idle"
+	else:
+		$AnimatedSprite2D.animation = "Walking"
+	
 	$AnimatedSprite2D.play()
 	#position = position.clamp(Vector2.ZERO, screen_size)
 
