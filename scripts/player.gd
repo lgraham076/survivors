@@ -1,11 +1,10 @@
-extends Area2D
-
+extends CharacterBody2D
 
 const SPEED = 75.0
 
 func _process(delta):
 	var flipped = $AnimatedSprite2D.flip_h
-	var velocity = Vector2.ZERO
+	velocity = Vector2.ZERO
 	if Input.is_action_pressed("Move_Left"):
 		velocity.x -= 1
 		if !flipped:
@@ -29,6 +28,7 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "Walking"
 	
 	$AnimatedSprite2D.play()
+	move_and_slide()
 	#position = position.clamp(Vector2.ZERO, screen_size)
 
 	
