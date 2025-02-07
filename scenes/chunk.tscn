@@ -557,7 +557,7 @@ texture = ExtResource("1_abfga")
 physics_layer_0/collision_layer = 2
 sources/1 = SubResource("TileSetAtlasSource_kknu0")
 
-[node name="Chunk" type="Node"]
+[node name="Chunk" type="Node2D"]
 script = ExtResource("1_cxpjm")
 
 [node name="Background" type="TileMapLayer" parent="."]

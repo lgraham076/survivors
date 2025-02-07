@@ -1,6 +1,6 @@
 extends Node
 
-
+const CHUNK_SIZE = Vector2(128,128)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

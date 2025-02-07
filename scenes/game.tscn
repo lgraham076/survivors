@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccfkoco3ktxig"]
+[gd_scene load_steps=4 format=3 uid="uid://ccfkoco3ktxig"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7o3wv"]
 [ext_resource type="PackedScene" uid="uid://c3tkwwwrw64ta" path="res://scenes/player.tscn" id="1_xvl7x"]
+[ext_resource type="PackedScene" uid="uid://cckhf2daji32o" path="res://scenes/chunk.tscn" id="2_ih1h6"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_7o3wv")
@@ -16,3 +17,9 @@ collision_mask = 2
 zoom = Vector2(2, 2)
 
 [node name="LoadedChunks" type="Node" parent="."]
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+process_thread_group = 2
+process_thread_group_order = 0
+process_thread_messages = 0
+resources = [PackedStringArray("chunk"), [ExtResource("2_ih1h6")]]
